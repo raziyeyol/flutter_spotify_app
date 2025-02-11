@@ -20,13 +20,6 @@ class AuthService {
     final encodedData =
         'grant_type=${Uri.encodeComponent("client_credentials")}';
 
-    print('--- [fetchClientCredentialsToken] Request ---');
-    print('POST URL: https://accounts.spotify.com/api/token');
-    print(
-        'Headers: {"Authorization": "Basic $authHeader", "Content-Type": "application/x-www-form-urlencoded"}');
-    print('Data: $encodedData');
-    print('---------------------------------------------');
-
     // Send the request to the Spotify API
     final response = await _dio.post(
       'https://accounts.spotify.com/api/token',
@@ -38,11 +31,6 @@ class AuthService {
       ),
       data: encodedData,
     );
-
-    print('--- [fetchClientCredentialsToken] Response ---');
-    print('Status Code: ${response.statusCode}');
-    print('Response Data: ${response.data}');
-    print('-----------------------------------------------');
 
     // If the response is successful, return the access token
     if (response.statusCode == 200) {

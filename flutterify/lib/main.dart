@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutterify/core/DI/injection_container.dart';
+import 'package:flutterify/ui/cubits/albums/albums_cubit.dart';
+import 'package:flutterify/ui/cubits/artists/artists_cubit.dart';
+import 'package:flutterify/ui/views/spotify_search_view.dart';
 
 void main() async {
   setupLocator();
@@ -11,22 +15,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => getIt<AlbumsCubit>(),
+        ),
+        BlocProvider(
+          create: (context) => getIt<ArtistsCubit>(),
+        ),
+      ],
+      child: const MaterialApp(
+        home: SpotifySearchView(),
       ),
-      home: const MyHomeView(),
     );
-  }
-}
-
-class MyHomeView extends StatelessWidget {
-  const MyHomeView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

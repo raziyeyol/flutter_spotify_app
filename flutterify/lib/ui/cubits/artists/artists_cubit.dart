@@ -7,6 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'artists_state.dart';
 part 'artists_cubit.freezed.dart';
 
+// This is the Cubit that manages the state of the Artists screen
 class ArtistsCubit extends Cubit<ArtistsState> {
   final ISpotifyRepository repository;
 
@@ -17,7 +18,7 @@ class ArtistsCubit extends Cubit<ArtistsState> {
     emit(const ArtistsState.loading());
     try {
       final response = await repository.getArtists(query);
-      emit(ArtistsState.Loaded(response));
+      emit(ArtistsState.loaded(response));
     } catch (e) {
       emit(ArtistsState.error(e.toString()));
     }

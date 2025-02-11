@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutterify/core/DI/injection_container.dart';
 
 void main() async {
+  setupLocator();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.R
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

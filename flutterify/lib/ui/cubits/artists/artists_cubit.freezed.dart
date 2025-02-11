@@ -21,7 +21,7 @@ mixin _$ArtistsState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)
-        Loaded,
+        loaded,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -30,7 +30,7 @@ mixin _$ArtistsState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)?
-        Loaded,
+        loaded,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -38,7 +38,7 @@ mixin _$ArtistsState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)? Loaded,
+    TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
@@ -47,7 +47,7 @@ mixin _$ArtistsState {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) Loaded,
+    required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -55,7 +55,7 @@ mixin _$ArtistsState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? Loaded,
+    TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -63,7 +63,7 @@ mixin _$ArtistsState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? Loaded,
+    TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
@@ -129,7 +129,7 @@ class _$InitialImpl implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)
-        Loaded,
+        loaded,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -141,7 +141,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)?
-        Loaded,
+        loaded,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -152,7 +152,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)? Loaded,
+    TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -167,7 +167,7 @@ class _$InitialImpl implements _Initial {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) Loaded,
+    required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
   }) {
     return initial(this);
@@ -178,7 +178,7 @@ class _$InitialImpl implements _Initial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? Loaded,
+    TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
@@ -189,7 +189,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? Loaded,
+    TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -245,7 +245,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)
-        Loaded,
+        loaded,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -257,7 +257,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)?
-        Loaded,
+        loaded,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -268,7 +268,7 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)? Loaded,
+    TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -283,7 +283,7 @@ class _$LoadingImpl implements _Loading {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) Loaded,
+    required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
   }) {
     return loading(this);
@@ -294,7 +294,7 @@ class _$LoadingImpl implements _Loading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? Loaded,
+    TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
@@ -305,7 +305,7 @@ class _$LoadingImpl implements _Loading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? Loaded,
+    TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -361,7 +361,7 @@ class _$LoadedImpl implements _Loaded {
 
   @override
   String toString() {
-    return 'ArtistsState.Loaded(artistsResponse: $artistsResponse)';
+    return 'ArtistsState.loaded(artistsResponse: $artistsResponse)';
   }
 
   @override
@@ -388,10 +388,10 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)
-        Loaded,
+        loaded,
     required TResult Function(String message) error,
   }) {
-    return Loaded(artistsResponse);
+    return loaded(artistsResponse);
   }
 
   @override
@@ -400,10 +400,10 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)?
-        Loaded,
+        loaded,
     TResult? Function(String message)? error,
   }) {
-    return Loaded?.call(artistsResponse);
+    return loaded?.call(artistsResponse);
   }
 
   @override
@@ -411,12 +411,12 @@ class _$LoadedImpl implements _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)? Loaded,
+    TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
-    if (Loaded != null) {
-      return Loaded(artistsResponse);
+    if (loaded != null) {
+      return loaded(artistsResponse);
     }
     return orElse();
   }
@@ -426,10 +426,10 @@ class _$LoadedImpl implements _Loaded {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) Loaded,
+    required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
   }) {
-    return Loaded(this);
+    return loaded(this);
   }
 
   @override
@@ -437,10 +437,10 @@ class _$LoadedImpl implements _Loaded {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? Loaded,
+    TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
   }) {
-    return Loaded?.call(this);
+    return loaded?.call(this);
   }
 
   @override
@@ -448,12 +448,12 @@ class _$LoadedImpl implements _Loaded {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? Loaded,
+    TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
-    if (Loaded != null) {
-      return Loaded(this);
+    if (loaded != null) {
+      return loaded(this);
     }
     return orElse();
   }
@@ -536,7 +536,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)
-        Loaded,
+        loaded,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -548,7 +548,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)?
-        Loaded,
+        loaded,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -559,7 +559,7 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)? Loaded,
+    TResult Function(SpotifyApiResponse<SpotifyArtist> artistsResponse)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -574,7 +574,7 @@ class _$ErrorImpl implements _Error {
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) Loaded,
+    required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
   }) {
     return error(this);
@@ -585,7 +585,7 @@ class _$ErrorImpl implements _Error {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? Loaded,
+    TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
@@ -596,7 +596,7 @@ class _$ErrorImpl implements _Error {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? Loaded,
+    TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {

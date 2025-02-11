@@ -7,6 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'albums_state.dart';
 part 'albums_cubit.freezed.dart';
 
+// This is the Cubit that manages the state of the Albums screen
 class AlbumsCubit extends Cubit<AlbumsState> {
   final ISpotifyRepository repository;
 
@@ -16,7 +17,7 @@ class AlbumsCubit extends Cubit<AlbumsState> {
     emit(const AlbumsState.loading());
     try {
       final response = await repository.getAlbums(query);
-      emit(AlbumsState.Loaded(response));
+      emit(AlbumsState.loaded(response));
     } catch (e) {
       emit(AlbumsState.error(e.toString()));
     }

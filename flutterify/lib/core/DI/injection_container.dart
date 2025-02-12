@@ -14,15 +14,15 @@ import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;
 
-void setupLocator() {
+void setupLocator() async {
   // 1. Register TokenManager as a singleton.
   getIt.registerSingleton<TokenManager>(TokenManager());
 
   // 2. Register AuthService as a lazy singleton.
   getIt.registerLazySingleton<AuthService>(
     () => AuthService(
-      clientId: ApiConsts.testClientId,
-      clientSecret: ApiConsts.testClientSecret,
+      clientId: ApiConsts.clientId,
+      clientSecret: ApiConsts.clientSecret,
     ),
   );
 

@@ -11,17 +11,16 @@ lib/
 │
 ├── core/
 │   ├── di/                # Dependency Injection (GetIt)
-│   ├── network/           # API and Dio setup
-│   ├── storage/           # Secure token storage
 │
 ├── data/
 │   ├── models/            # Data Models
-│   ├── repositories/      # Data Repositories
 │
 ├── domain/
 │   ├── api/
 │   │   ├── dio/           # Dio API setup
+│   │   ├── models/            # Data Models
 │   │   ├── service/       # AuthService
+│   ├── repositories/      # Data Repositories
 │
 ├── presentation/
 │   ├── cubits/            # Bloc Cubits
@@ -40,18 +39,7 @@ Dependency Injection: Uses GetIt for DI
 
 Error Handling: Implemented in Dio Interceptors
 
-🔧 Setup & Installation
-
-1️⃣ Clone the Repository
-
-git clone https://github.com/yourusername/flutterify.git
-cd flutterify
-
-2️⃣ Install Dependencies
-
-flutter pub get
-
-4️⃣ Run the Application
+🔧 Run the Application
 
 flutter run \
   --dart-define=CLIENT_ID=3af8e17840684c5bb3325a5e8b8e808d \
@@ -86,11 +74,3 @@ GetIt (Dependency Injection)
 Flutter Secure Storage (Token storage)
 
 Freezed (Immutable Data Classes)
-
-
-📸 Screenshots
-
-assets/images/screenshot1.png
-assets/images/screenshot2.png
-assets/images/screenshot3.png
-assets/images/screenshot4.png

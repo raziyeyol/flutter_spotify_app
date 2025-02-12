@@ -1,5 +1,3 @@
-# flutter_spotify_app
-
 # flutterify
 
 Flutterify - Spotify API Integration
@@ -13,17 +11,16 @@ lib/
 │
 ├── core/
 │   ├── di/                # Dependency Injection (GetIt)
-│   ├── network/           # API and Dio setup
-│   ├── storage/           # Secure token storage
 │
 ├── data/
 │   ├── models/            # Data Models
-│   ├── repositories/      # Data Repositories
 │
 ├── domain/
 │   ├── api/
 │   │   ├── dio/           # Dio API setup
+│   │   ├── models/            # Data Models
 │   │   ├── service/       # AuthService
+│   ├── repositories/      # Data Repositories
 │
 ├── presentation/
 │   ├── cubits/            # Bloc Cubits
@@ -42,22 +39,11 @@ Dependency Injection: Uses GetIt for DI
 
 Error Handling: Implemented in Dio Interceptors
 
-🔧 Setup & Installation
-
-1️⃣ Clone the Repository
-
-git clone https://github.com/yourusername/flutterify.git
-cd flutterify
-
-2️⃣ Install Dependencies
-
-flutter pub get
-
-4️⃣ Run the Application
+🔧 Run the Application
 
 flutter run \
-  --dart-define=CLIENT_ID=your_client_id \
-  --dart-define=CLIENT_SECRET=your_secret
+  --dart-define=CLIENT_ID=3af8e17840684c5bb3325a5e8b8e808d \
+  --dart-define=CLIENT_SECRET=e46b037b7f76416ca7e3ac9676f557f7
 
 
 🔑 Environment Variables
@@ -88,6 +74,3 @@ GetIt (Dependency Injection)
 Flutter Secure Storage (Token storage)
 
 Freezed (Immutable Data Classes)
-
-
-

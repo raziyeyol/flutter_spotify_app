@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutterify/core/DI/injection_container.dart';
 import 'package:flutterify/ui/cubits/albums/albums_cubit.dart';
 import 'package:flutterify/ui/cubits/artists/artists_cubit.dart';
+import 'package:flutterify/ui/views/splash_screen.dart';
 import 'package:flutterify/ui/views/spotify_search_view.dart';
 
 void main() async {
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: const MaterialApp(
-        home: SpotifySearchView(),
+        debugShowCheckedModeBanner: false,
+        home: SplashScreen(),
       ),
     );
   }

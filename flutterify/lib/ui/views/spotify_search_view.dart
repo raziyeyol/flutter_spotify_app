@@ -5,6 +5,7 @@ import 'package:flutterify/ui/cubits/albums/albums_cubit.dart';
 import 'package:flutterify/ui/cubits/artists/artists_cubit.dart';
 import 'package:flutterify/ui/widgets/album_tile.dart';
 import 'package:flutterify/ui/widgets/artist_tile.dart';
+import 'package:flutterify/utilities/error_mapper.dart';
 
 class SpotifySearchView extends StatefulWidget {
   const SpotifySearchView({Key? key}) : super(key: key);
@@ -16,6 +17,7 @@ class SpotifySearchView extends StatefulWidget {
 class _SpotifySearchViewState extends State<SpotifySearchView>
     with SingleTickerProviderStateMixin {
   bool _isAlbumSelected = true;
+  bool _isSearchEmpty = true;
   final TextEditingController _searchController = TextEditingController();
 
   @override
@@ -26,11 +28,24 @@ class _SpotifySearchViewState extends State<SpotifySearchView>
 
   void _onSearchChanged() {
     final query = _searchController.text.trim();
-    if (query.isEmpty) return;
-    if (_isAlbumSelected) {
-      context.read<AlbumsCubit>().getAlbums(query);
+    setState(() {
+      _isSearchEmpty = query.isEmpty;
+    });
+
+    if (query.isEmpty) {
+      // Reset the state of both Cubits when search is cleared
+      context.read<AlbumsCubit>().resetState();
+      context.read<ArtistsCubit>().resetState();
+
+      setState(() {
+        _isSearchEmpty = true;
+      });
     } else {
-      context.read<ArtistsCubit>().getArtists(query);
+      if (_isAlbumSelected) {
+        context.read<AlbumsCubit>().getAlbums(query);
+      } else {
+        context.read<ArtistsCubit>().getArtists(query);
+      }
     }
   }
 
@@ -93,10 +108,6 @@ class _SpotifySearchViewState extends State<SpotifySearchView>
                           icon: const Icon(Icons.clear),
                           onPressed: () {
                             _searchController.clear();
-                            // Reset the state of both Cubits when search is cleared
-                            context.read<AlbumsCubit>().resetState();
-                            context.read<ArtistsCubit>().resetState();
-                            setState(() {});
                           },
                         )
                       : null,
@@ -105,43 +116,51 @@ class _SpotifySearchViewState extends State<SpotifySearchView>
                   _onSearchChanged();
                 }),
           ),
-          Padding(
-            padding:
-                const EdgeInsets.symmetric(horizontal: 8.0, vertical: 25.0),
-            child: Row(
-              children: [
-                _buildToggleButton(
-                  text: 'Albums',
-                  isActive: _isAlbumSelected,
-                  onPressed: () {
-                    setState(() => _isAlbumSelected = true);
-                    _onSearchChanged();
-                  },
-                ),
-                const SizedBox(width: 20),
-                _buildToggleButton(
-                  text: 'Artists',
-                  isActive: !_isAlbumSelected,
-                  onPressed: () {
-                    setState(() => _isAlbumSelected = false);
-                    _onSearchChanged();
-                  },
-                ),
-              ],
+          if (!_isSearchEmpty)
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 8.0, vertical: 25.0),
+              child: Row(
+                children: [
+                  _buildToggleButton(
+                    text: 'Albums',
+                    isActive: _isAlbumSelected,
+                    onPressed: () {
+                      setState(() => _isAlbumSelected = true);
+                      _onSearchChanged();
+                    },
+                  ),
+                  const SizedBox(width: 20),
+                  _buildToggleButton(
+                    text: 'Artists',
+                    isActive: !_isAlbumSelected,
+                    onPressed: () {
+                      setState(() => _isAlbumSelected = false);
+                      _onSearchChanged();
+                    },
+                  ),
+                ],
+              ),
             ),
-          ),
           Expanded(
-            child: _isAlbumSelected
+            child: _isAlbumSelected && !_isSearchEmpty
                 ? BlocBuilder<AlbumsCubit, AlbumsState>(
                     builder: (context, state) {
                       return state.when(
-                        initial: () =>
-                            const Center(child: Text('Enter a search query')),
+                        initial: () => const Center(
+                            child: Text(
+                          'Enter a search query',
+                          style: TextStyle(color: Colors.white),
+                        )),
                         loading: () =>
                             const Center(child: CircularProgressIndicator()),
                         loaded: (albumsResponse) {
                           if (albumsResponse.items.isEmpty) {
-                            return const Center(child: Text('No albums found'));
+                            return const Center(
+                                child: Text(
+                              'No albums found',
+                              style: TextStyle(color: Colors.white),
+                            ));
                           }
                           return GridView.builder(
                             gridDelegate:
@@ -156,22 +175,29 @@ class _SpotifySearchViewState extends State<SpotifySearchView>
                             },
                           );
                         },
-                        error: (message) =>
-                            Center(child: Text('Error: $message')),
+                        error: (message) => Center(
+                            child: Text(mapErrorToMessage(message),
+                                style: const TextStyle(color: Colors.white))),
                       );
                     },
                   )
                 : BlocBuilder<ArtistsCubit, ArtistsState>(
                     builder: (context, state) {
                       return state.when(
-                        initial: () =>
-                            const Center(child: Text('Enter a search query')),
+                        initial: () => const Center(
+                            child: Text(
+                          'Enter a search query',
+                          style: TextStyle(color: Colors.white),
+                        )),
                         loading: () =>
                             const Center(child: CircularProgressIndicator()),
                         loaded: (artistsResponse) {
                           if (artistsResponse.items.isEmpty) {
                             return const Center(
-                                child: Text('No artists found'));
+                                child: Text(
+                              'No artists found',
+                              style: TextStyle(color: Colors.white),
+                            ));
                           }
                           return ListView.builder(
                             itemCount: artistsResponse.items.length,
@@ -181,8 +207,11 @@ class _SpotifySearchViewState extends State<SpotifySearchView>
                             },
                           );
                         },
-                        error: (message) =>
-                            Center(child: Text('Error: $message')),
+                        error: (message) => Center(
+                            child: Text(
+                          mapErrorToMessage(message),
+                          style: const TextStyle(color: Colors.white),
+                        )),
                       );
                     },
                   ),

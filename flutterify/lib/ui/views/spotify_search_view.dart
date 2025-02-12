@@ -67,6 +67,8 @@ class _SpotifySearchViewState extends State<SpotifySearchView>
                 inputFormatters: [
                   FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z0-9\s]')),
                 ],
+                enableSuggestions: false,
+                autocorrect: false,
                 decoration: InputDecoration(
                   hintText: "Artists, albums..",
                   hintStyle: const TextStyle(color: Colors.black),
@@ -91,6 +93,10 @@ class _SpotifySearchViewState extends State<SpotifySearchView>
                           icon: const Icon(Icons.clear),
                           onPressed: () {
                             _searchController.clear();
+                            // Reset the state of both Cubits when search is cleared
+                            context.read<AlbumsCubit>().resetState();
+                            context.read<ArtistsCubit>().resetState();
+                            setState(() {});
                           },
                         )
                       : null,

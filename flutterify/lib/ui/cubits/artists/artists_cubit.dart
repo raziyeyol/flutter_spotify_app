@@ -22,4 +22,8 @@ class ArtistsCubit extends Cubit<ArtistsState> {
       emit(ArtistsStateError(e.toString()));
     }
   }
+
+  void resetState() {
+    emit(const ArtistsStateInitial());
+  }
 }

@@ -22,4 +22,8 @@ class AlbumsCubit extends Cubit<AlbumsState> {
       emit(AlbumsStateError(e.toString()));
     }
   }
+
+  void resetState() {
+    emit(const AlbumsStateInitial());
+  }
 }

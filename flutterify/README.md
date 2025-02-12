@@ -54,14 +54,8 @@ flutter pub get
 4️⃣ Run the Application
 
 flutter run \
-  --dart-define=CLIENT_ID=your_clien_id \
-  --dart-define=CLIENT_SECRET=your_secret
-
-If you build for release, you can also include these flags in your build command:
-
-flutter build ios \
-  --dart-define=CLIENT_ID=your_clien_id \
-  --dart-define=CLIENT_SECRET=your_secret
+  --dart-define=CLIENT_ID=3af8e17840684c5bb3325a5e8b8e808d \
+  --dart-define=CLIENT_SECRET=e46b037b7f76416ca7e3ac9676f557f7
 
 
 🔑 Environment Variables

@@ -56,8 +56,8 @@ flutter pub get
 4️⃣ Run the Application
 
 flutter run \
-  --dart-define=CLIENT_ID=3af8e17840684c5bb3325a5e8b8e808d \
-  --dart-define=CLIENT_SECRET=e46b037b7f76416ca7e3ac9676f557f7
+  --dart-define=CLIENT_ID=your_client_id \
+  --dart-define=CLIENT_SECRET=your_secret
 
 
 🔑 Environment Variables

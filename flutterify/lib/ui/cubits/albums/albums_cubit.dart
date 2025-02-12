@@ -11,15 +11,15 @@ part 'albums_cubit.freezed.dart';
 class AlbumsCubit extends Cubit<AlbumsState> {
   final ISpotifyRepository repository;
 
-  AlbumsCubit({required this.repository}) : super(const AlbumsState.initial());
+  AlbumsCubit({required this.repository}) : super(const AlbumsStateInitial());
 
   Future<void> getAlbums(String query) async {
-    emit(const AlbumsState.loading());
+    emit(const AlbumsStateLoading());
     try {
       final response = await repository.getAlbums(query);
-      emit(AlbumsState.loaded(response));
+      emit(AlbumsStateLoaded(response));
     } catch (e) {
-      emit(AlbumsState.error(e.toString()));
+      emit(AlbumsStateError(e.toString()));
     }
   }
 }

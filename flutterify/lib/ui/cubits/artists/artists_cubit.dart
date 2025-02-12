@@ -11,16 +11,15 @@ part 'artists_cubit.freezed.dart';
 class ArtistsCubit extends Cubit<ArtistsState> {
   final ISpotifyRepository repository;
 
-  ArtistsCubit({required this.repository})
-      : super(const ArtistsState.initial());
+  ArtistsCubit({required this.repository}) : super(const ArtistsStateInitial());
 
   Future<void> getArtists(String query) async {
-    emit(const ArtistsState.loading());
+    emit(const ArtistsStateLoading());
     try {
       final response = await repository.getArtists(query);
-      emit(ArtistsState.loaded(response));
+      emit(ArtistsStateLoaded(response));
     } catch (e) {
-      emit(ArtistsState.error(e.toString()));
+      emit(ArtistsStateError(e.toString()));
     }
   }
 }

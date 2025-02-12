@@ -20,8 +20,7 @@ mixin _$AlbumsState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)
-        loaded,
+    required TResult Function(SpotifyApiResponse<SpotifyAlbum> albums) loaded,
     required TResult Function(String message) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -29,7 +28,7 @@ mixin _$AlbumsState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)? loaded,
+    TResult? Function(SpotifyApiResponse<SpotifyAlbum> albums)? loaded,
     TResult? Function(String message)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -37,33 +36,33 @@ mixin _$AlbumsState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)? loaded,
+    TResult Function(SpotifyApiResponse<SpotifyAlbum> albums)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
+    required TResult Function(AlbumsStateInitial value) initial,
+    required TResult Function(AlbumsStateLoading value) loading,
+    required TResult Function(AlbumsStateLoaded value) loaded,
+    required TResult Function(AlbumsStateError value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
+    TResult? Function(AlbumsStateInitial value)? initial,
+    TResult? Function(AlbumsStateLoading value)? loading,
+    TResult? Function(AlbumsStateLoaded value)? loaded,
+    TResult? Function(AlbumsStateError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
+    TResult Function(AlbumsStateInitial value)? initial,
+    TResult Function(AlbumsStateLoading value)? loading,
+    TResult Function(AlbumsStateLoaded value)? loaded,
+    TResult Function(AlbumsStateError value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -88,25 +87,25 @@ class _$AlbumsStateCopyWithImpl<$Res, $Val extends AlbumsState>
 }
 
 /// @nodoc
-abstract class _$$InitialImplCopyWith<$Res> {
-  factory _$$InitialImplCopyWith(
-          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
-      __$$InitialImplCopyWithImpl<$Res>;
+abstract class _$$AlbumsStateInitialImplCopyWith<$Res> {
+  factory _$$AlbumsStateInitialImplCopyWith(_$AlbumsStateInitialImpl value,
+          $Res Function(_$AlbumsStateInitialImpl) then) =
+      __$$AlbumsStateInitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialImplCopyWithImpl<$Res>
-    extends _$AlbumsStateCopyWithImpl<$Res, _$InitialImpl>
-    implements _$$InitialImplCopyWith<$Res> {
-  __$$InitialImplCopyWithImpl(
-      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
+class __$$AlbumsStateInitialImplCopyWithImpl<$Res>
+    extends _$AlbumsStateCopyWithImpl<$Res, _$AlbumsStateInitialImpl>
+    implements _$$AlbumsStateInitialImplCopyWith<$Res> {
+  __$$AlbumsStateInitialImplCopyWithImpl(_$AlbumsStateInitialImpl _value,
+      $Res Function(_$AlbumsStateInitialImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
-  const _$InitialImpl();
+class _$AlbumsStateInitialImpl implements AlbumsStateInitial {
+  const _$AlbumsStateInitialImpl();
 
   @override
   String toString() {
@@ -116,7 +115,7 @@ class _$InitialImpl implements _Initial {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$InitialImpl);
+        (other.runtimeType == runtimeType && other is _$AlbumsStateInitialImpl);
   }
 
   @override
@@ -127,8 +126,7 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)
-        loaded,
+    required TResult Function(SpotifyApiResponse<SpotifyAlbum> albums) loaded,
     required TResult Function(String message) error,
   }) {
     return initial();
@@ -139,7 +137,7 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)? loaded,
+    TResult? Function(SpotifyApiResponse<SpotifyAlbum> albums)? loaded,
     TResult? Function(String message)? error,
   }) {
     return initial?.call();
@@ -150,7 +148,7 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)? loaded,
+    TResult Function(SpotifyApiResponse<SpotifyAlbum> albums)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -163,10 +161,10 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
+    required TResult Function(AlbumsStateInitial value) initial,
+    required TResult Function(AlbumsStateLoading value) loading,
+    required TResult Function(AlbumsStateLoaded value) loaded,
+    required TResult Function(AlbumsStateError value) error,
   }) {
     return initial(this);
   }
@@ -174,10 +172,10 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
+    TResult? Function(AlbumsStateInitial value)? initial,
+    TResult? Function(AlbumsStateLoading value)? loading,
+    TResult? Function(AlbumsStateLoaded value)? loaded,
+    TResult? Function(AlbumsStateError value)? error,
   }) {
     return initial?.call(this);
   }
@@ -185,10 +183,10 @@ class _$InitialImpl implements _Initial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
+    TResult Function(AlbumsStateInitial value)? initial,
+    TResult Function(AlbumsStateLoading value)? loading,
+    TResult Function(AlbumsStateLoaded value)? loaded,
+    TResult Function(AlbumsStateError value)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -198,30 +196,30 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements AlbumsState {
-  const factory _Initial() = _$InitialImpl;
+abstract class AlbumsStateInitial implements AlbumsState {
+  const factory AlbumsStateInitial() = _$AlbumsStateInitialImpl;
 }
 
 /// @nodoc
-abstract class _$$LoadingImplCopyWith<$Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
-      __$$LoadingImplCopyWithImpl<$Res>;
+abstract class _$$AlbumsStateLoadingImplCopyWith<$Res> {
+  factory _$$AlbumsStateLoadingImplCopyWith(_$AlbumsStateLoadingImpl value,
+          $Res Function(_$AlbumsStateLoadingImpl) then) =
+      __$$AlbumsStateLoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$AlbumsStateCopyWithImpl<$Res, _$LoadingImpl>
-    implements _$$LoadingImplCopyWith<$Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
+class __$$AlbumsStateLoadingImplCopyWithImpl<$Res>
+    extends _$AlbumsStateCopyWithImpl<$Res, _$AlbumsStateLoadingImpl>
+    implements _$$AlbumsStateLoadingImplCopyWith<$Res> {
+  __$$AlbumsStateLoadingImplCopyWithImpl(_$AlbumsStateLoadingImpl _value,
+      $Res Function(_$AlbumsStateLoadingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadingImpl implements _Loading {
-  const _$LoadingImpl();
+class _$AlbumsStateLoadingImpl implements AlbumsStateLoading {
+  const _$AlbumsStateLoadingImpl();
 
   @override
   String toString() {
@@ -231,7 +229,7 @@ class _$LoadingImpl implements _Loading {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl);
+        (other.runtimeType == runtimeType && other is _$AlbumsStateLoadingImpl);
   }
 
   @override
@@ -242,8 +240,7 @@ class _$LoadingImpl implements _Loading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)
-        loaded,
+    required TResult Function(SpotifyApiResponse<SpotifyAlbum> albums) loaded,
     required TResult Function(String message) error,
   }) {
     return loading();
@@ -254,7 +251,7 @@ class _$LoadingImpl implements _Loading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)? loaded,
+    TResult? Function(SpotifyApiResponse<SpotifyAlbum> albums)? loaded,
     TResult? Function(String message)? error,
   }) {
     return loading?.call();
@@ -265,7 +262,7 @@ class _$LoadingImpl implements _Loading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)? loaded,
+    TResult Function(SpotifyApiResponse<SpotifyAlbum> albums)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -278,10 +275,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
+    required TResult Function(AlbumsStateInitial value) initial,
+    required TResult Function(AlbumsStateLoading value) loading,
+    required TResult Function(AlbumsStateLoaded value) loaded,
+    required TResult Function(AlbumsStateError value) error,
   }) {
     return loading(this);
   }
@@ -289,10 +286,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
+    TResult? Function(AlbumsStateInitial value)? initial,
+    TResult? Function(AlbumsStateLoading value)? loading,
+    TResult? Function(AlbumsStateLoaded value)? loaded,
+    TResult? Function(AlbumsStateError value)? error,
   }) {
     return loading?.call(this);
   }
@@ -300,10 +297,10 @@ class _$LoadingImpl implements _Loading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
+    TResult Function(AlbumsStateInitial value)? initial,
+    TResult Function(AlbumsStateLoading value)? loading,
+    TResult Function(AlbumsStateLoaded value)? loaded,
+    TResult Function(AlbumsStateError value)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -313,36 +310,36 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements AlbumsState {
-  const factory _Loading() = _$LoadingImpl;
+abstract class AlbumsStateLoading implements AlbumsState {
+  const factory AlbumsStateLoading() = _$AlbumsStateLoadingImpl;
 }
 
 /// @nodoc
-abstract class _$$LoadedImplCopyWith<$Res> {
-  factory _$$LoadedImplCopyWith(
-          _$LoadedImpl value, $Res Function(_$LoadedImpl) then) =
-      __$$LoadedImplCopyWithImpl<$Res>;
+abstract class _$$AlbumsStateLoadedImplCopyWith<$Res> {
+  factory _$$AlbumsStateLoadedImplCopyWith(_$AlbumsStateLoadedImpl value,
+          $Res Function(_$AlbumsStateLoadedImpl) then) =
+      __$$AlbumsStateLoadedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({SpotifyApiResponse<SpotifyAlbum> albumsResponse});
+  $Res call({SpotifyApiResponse<SpotifyAlbum> albums});
 }
 
 /// @nodoc
-class __$$LoadedImplCopyWithImpl<$Res>
-    extends _$AlbumsStateCopyWithImpl<$Res, _$LoadedImpl>
-    implements _$$LoadedImplCopyWith<$Res> {
-  __$$LoadedImplCopyWithImpl(
-      _$LoadedImpl _value, $Res Function(_$LoadedImpl) _then)
+class __$$AlbumsStateLoadedImplCopyWithImpl<$Res>
+    extends _$AlbumsStateCopyWithImpl<$Res, _$AlbumsStateLoadedImpl>
+    implements _$$AlbumsStateLoadedImplCopyWith<$Res> {
+  __$$AlbumsStateLoadedImplCopyWithImpl(_$AlbumsStateLoadedImpl _value,
+      $Res Function(_$AlbumsStateLoadedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? albumsResponse = null,
+    Object? albums = null,
   }) {
-    return _then(_$LoadedImpl(
-      null == albumsResponse
-          ? _value.albumsResponse
-          : albumsResponse // ignore: cast_nullable_to_non_nullable
+    return _then(_$AlbumsStateLoadedImpl(
+      null == albums
+          ? _value.albums
+          : albums // ignore: cast_nullable_to_non_nullable
               as SpotifyApiResponse<SpotifyAlbum>,
     ));
   }
@@ -350,45 +347,44 @@ class __$$LoadedImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadedImpl implements _Loaded {
-  const _$LoadedImpl(this.albumsResponse);
+class _$AlbumsStateLoadedImpl implements AlbumsStateLoaded {
+  const _$AlbumsStateLoadedImpl(this.albums);
 
   @override
-  final SpotifyApiResponse<SpotifyAlbum> albumsResponse;
+  final SpotifyApiResponse<SpotifyAlbum> albums;
 
   @override
   String toString() {
-    return 'AlbumsState.loaded(albumsResponse: $albumsResponse)';
+    return 'AlbumsState.loaded(albums: $albums)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoadedImpl &&
-            (identical(other.albumsResponse, albumsResponse) ||
-                other.albumsResponse == albumsResponse));
+            other is _$AlbumsStateLoadedImpl &&
+            (identical(other.albums, albums) || other.albums == albums));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, albumsResponse);
+  int get hashCode => Object.hash(runtimeType, albums);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
-      __$$LoadedImplCopyWithImpl<_$LoadedImpl>(this, _$identity);
+  _$$AlbumsStateLoadedImplCopyWith<_$AlbumsStateLoadedImpl> get copyWith =>
+      __$$AlbumsStateLoadedImplCopyWithImpl<_$AlbumsStateLoadedImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)
-        loaded,
+    required TResult Function(SpotifyApiResponse<SpotifyAlbum> albums) loaded,
     required TResult Function(String message) error,
   }) {
-    return loaded(albumsResponse);
+    return loaded(albums);
   }
 
   @override
@@ -396,10 +392,10 @@ class _$LoadedImpl implements _Loaded {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)? loaded,
+    TResult? Function(SpotifyApiResponse<SpotifyAlbum> albums)? loaded,
     TResult? Function(String message)? error,
   }) {
-    return loaded?.call(albumsResponse);
+    return loaded?.call(albums);
   }
 
   @override
@@ -407,12 +403,12 @@ class _$LoadedImpl implements _Loaded {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)? loaded,
+    TResult Function(SpotifyApiResponse<SpotifyAlbum> albums)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
-      return loaded(albumsResponse);
+      return loaded(albums);
     }
     return orElse();
   }
@@ -420,10 +416,10 @@ class _$LoadedImpl implements _Loaded {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
+    required TResult Function(AlbumsStateInitial value) initial,
+    required TResult Function(AlbumsStateLoading value) loading,
+    required TResult Function(AlbumsStateLoaded value) loaded,
+    required TResult Function(AlbumsStateError value) error,
   }) {
     return loaded(this);
   }
@@ -431,10 +427,10 @@ class _$LoadedImpl implements _Loaded {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
+    TResult? Function(AlbumsStateInitial value)? initial,
+    TResult? Function(AlbumsStateLoading value)? loading,
+    TResult? Function(AlbumsStateLoaded value)? loaded,
+    TResult? Function(AlbumsStateError value)? error,
   }) {
     return loaded?.call(this);
   }
@@ -442,10 +438,10 @@ class _$LoadedImpl implements _Loaded {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
+    TResult Function(AlbumsStateInitial value)? initial,
+    TResult Function(AlbumsStateLoading value)? loading,
+    TResult Function(AlbumsStateLoaded value)? loaded,
+    TResult Function(AlbumsStateError value)? error,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -455,31 +451,31 @@ class _$LoadedImpl implements _Loaded {
   }
 }
 
-abstract class _Loaded implements AlbumsState {
-  const factory _Loaded(final SpotifyApiResponse<SpotifyAlbum> albumsResponse) =
-      _$LoadedImpl;
+abstract class AlbumsStateLoaded implements AlbumsState {
+  const factory AlbumsStateLoaded(
+      final SpotifyApiResponse<SpotifyAlbum> albums) = _$AlbumsStateLoadedImpl;
 
-  SpotifyApiResponse<SpotifyAlbum> get albumsResponse;
+  SpotifyApiResponse<SpotifyAlbum> get albums;
   @JsonKey(ignore: true)
-  _$$LoadedImplCopyWith<_$LoadedImpl> get copyWith =>
+  _$$AlbumsStateLoadedImplCopyWith<_$AlbumsStateLoadedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ErrorImplCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(
-          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
-      __$$ErrorImplCopyWithImpl<$Res>;
+abstract class _$$AlbumsStateErrorImplCopyWith<$Res> {
+  factory _$$AlbumsStateErrorImplCopyWith(_$AlbumsStateErrorImpl value,
+          $Res Function(_$AlbumsStateErrorImpl) then) =
+      __$$AlbumsStateErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$AlbumsStateCopyWithImpl<$Res, _$ErrorImpl>
-    implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(
-      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
+class __$$AlbumsStateErrorImplCopyWithImpl<$Res>
+    extends _$AlbumsStateCopyWithImpl<$Res, _$AlbumsStateErrorImpl>
+    implements _$$AlbumsStateErrorImplCopyWith<$Res> {
+  __$$AlbumsStateErrorImplCopyWithImpl(_$AlbumsStateErrorImpl _value,
+      $Res Function(_$AlbumsStateErrorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -487,7 +483,7 @@ class __$$ErrorImplCopyWithImpl<$Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$ErrorImpl(
+    return _then(_$AlbumsStateErrorImpl(
       null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -498,8 +494,8 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl implements _Error {
-  const _$ErrorImpl(this.message);
+class _$AlbumsStateErrorImpl implements AlbumsStateError {
+  const _$AlbumsStateErrorImpl(this.message);
 
   @override
   final String message;
@@ -513,7 +509,7 @@ class _$ErrorImpl implements _Error {
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErrorImpl &&
+            other is _$AlbumsStateErrorImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -523,16 +519,16 @@ class _$ErrorImpl implements _Error {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
+  _$$AlbumsStateErrorImplCopyWith<_$AlbumsStateErrorImpl> get copyWith =>
+      __$$AlbumsStateErrorImplCopyWithImpl<_$AlbumsStateErrorImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)
-        loaded,
+    required TResult Function(SpotifyApiResponse<SpotifyAlbum> albums) loaded,
     required TResult Function(String message) error,
   }) {
     return error(message);
@@ -543,7 +539,7 @@ class _$ErrorImpl implements _Error {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)? loaded,
+    TResult? Function(SpotifyApiResponse<SpotifyAlbum> albums)? loaded,
     TResult? Function(String message)? error,
   }) {
     return error?.call(message);
@@ -554,7 +550,7 @@ class _$ErrorImpl implements _Error {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function(SpotifyApiResponse<SpotifyAlbum> albumsResponse)? loaded,
+    TResult Function(SpotifyApiResponse<SpotifyAlbum> albums)? loaded,
     TResult Function(String message)? error,
     required TResult orElse(),
   }) {
@@ -567,10 +563,10 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Loaded value) loaded,
-    required TResult Function(_Error value) error,
+    required TResult Function(AlbumsStateInitial value) initial,
+    required TResult Function(AlbumsStateLoading value) loading,
+    required TResult Function(AlbumsStateLoaded value) loaded,
+    required TResult Function(AlbumsStateError value) error,
   }) {
     return error(this);
   }
@@ -578,10 +574,10 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Loaded value)? loaded,
-    TResult? Function(_Error value)? error,
+    TResult? Function(AlbumsStateInitial value)? initial,
+    TResult? Function(AlbumsStateLoading value)? loading,
+    TResult? Function(AlbumsStateLoaded value)? loaded,
+    TResult? Function(AlbumsStateError value)? error,
   }) {
     return error?.call(this);
   }
@@ -589,10 +585,10 @@ class _$ErrorImpl implements _Error {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Loaded value)? loaded,
-    TResult Function(_Error value)? error,
+    TResult Function(AlbumsStateInitial value)? initial,
+    TResult Function(AlbumsStateLoading value)? loading,
+    TResult Function(AlbumsStateLoaded value)? loaded,
+    TResult Function(AlbumsStateError value)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -602,11 +598,11 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements AlbumsState {
-  const factory _Error(final String message) = _$ErrorImpl;
+abstract class AlbumsStateError implements AlbumsState {
+  const factory AlbumsStateError(final String message) = _$AlbumsStateErrorImpl;
 
   String get message;
   @JsonKey(ignore: true)
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+  _$$AlbumsStateErrorImplCopyWith<_$AlbumsStateErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

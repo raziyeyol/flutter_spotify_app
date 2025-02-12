@@ -147,11 +147,7 @@ class _SpotifySearchViewState extends State<SpotifySearchView>
                 ? BlocBuilder<AlbumsCubit, AlbumsState>(
                     builder: (context, state) {
                       return state.when(
-                        initial: () => const Center(
-                            child: Text(
-                          'Enter a search query',
-                          style: TextStyle(color: Colors.white),
-                        )),
+                        initial: () => const Center(),
                         loading: () =>
                             const Center(child: CircularProgressIndicator()),
                         loaded: (albumsResponse) {
@@ -184,11 +180,7 @@ class _SpotifySearchViewState extends State<SpotifySearchView>
                 : BlocBuilder<ArtistsCubit, ArtistsState>(
                     builder: (context, state) {
                       return state.when(
-                        initial: () => const Center(
-                            child: Text(
-                          'Enter a search query',
-                          style: TextStyle(color: Colors.white),
-                        )),
+                        initial: () => const Center(),
                         loading: () =>
                             const Center(child: CircularProgressIndicator()),
                         loaded: (artistsResponse) {

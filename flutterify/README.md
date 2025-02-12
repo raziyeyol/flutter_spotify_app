@@ -86,3 +86,6 @@ GetIt (Dependency Injection)
 Flutter Secure Storage (Token storage)
 
 Freezed (Immutable Data Classes)
+
+
+📸 Screenshots

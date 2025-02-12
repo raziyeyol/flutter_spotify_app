@@ -22,7 +22,7 @@ class AuthInterceptor extends Interceptor {
   ) async {
     try {
       // Get the valid access token
-      String? token = _tokenManager.validAccessToken;
+      String? token = await _tokenManager.validAccessToken;
       // If the token is null, refresh it
       token ??= await _performRefresh();
       if (token == null) {

@@ -1,0 +1,56 @@
+lib
+├── core
+│   └── DI
+│       └── injection_container.dart
+├── data
+│   └── models
+│       ├── spotify_album.dart
+│       ├── spotify_album.freezed.dart
+│       ├── spotify_album.g.dart
+│       ├── spotify_artist.dart
+│       ├── spotify_artist.freezed.dart
+│       ├── spotify_artist.g.dart
+│       ├── spotify_image.dart
+│       ├── spotify_image.freezed.dart
+│       └── spotify_image.g.dart
+├── domain
+│   ├── api
+│   │   ├── api_consts.dart
+│   │   ├── dio
+│   │   │   ├── auth_interceptor.dart
+│   │   │   ├── dio_factory.dart
+│   │   │   └── token_manager.dart
+│   │   ├── models
+│   │   │   ├── spotify_album_search_response.dart
+│   │   │   ├── spotify_album_search_response.g.dart
+│   │   │   ├── spotify_api_response.dart
+│   │   │   ├── spotify_api_response.g.dart
+│   │   │   ├── spotify_artist_search_response.dart
+│   │   │   └── spotify_artist_search_response.g.dart
+│   │   ├── service
+│   │   │   └── auth_service.dart
+│   │   ├── spotify_api.dart
+│   │   └── spotify_api.g.dart
+│   └── repositories
+│       └── spotify_repository.dart
+├── main.dart
+├── ui
+│   ├── cubits
+│   │   ├── albums
+│   │   │   ├── albums_cubit.dart
+│   │   │   ├── albums_cubit.freezed.dart
+│   │   │   └── albums_state.dart
+│   │   └── artists
+│   │       ├── artists_cubit.dart
+│   │       ├── artists_cubit.freezed.dart
+│   │       └── artists_state.dart
+│   ├── views
+│   │   ├── splash_screen.dart
+│   │   └── spotify_search_view.dart
+│   └── widgets
+│       ├── album_tile.dart
+│       └── artist_tile.dart
+└── utilities
+    └── error_mapper.dart
+
+18 directories, 36 files

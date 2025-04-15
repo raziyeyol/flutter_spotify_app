@@ -79,3 +79,5 @@ CLIENT_SECRET=your_client_secret_here
 - **Freezed** (Immutable Data Classes)
 
 ---
+
+## Check out more in my Medium article: https://medium.com/@raziyeyol/building-flutterify-a-comprehensive-guide-to-developing-a-spotify-search-app-with-flutter-48e9e6a94d78
